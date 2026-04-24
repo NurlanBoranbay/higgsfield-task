@@ -144,7 +144,7 @@ higgs/
 
 ### Model Choice
 
-The agent runs on **`claude-haiku-4-5`**. The judge uses **`claude-sonnet-4-6`** — a different, more capable model. This is a deliberate decision to mitigate **self-preference bias**, where LLMs tend to rate outputs from the same model family/generation higher. Using a stronger judge also means it can better detect subtle grounding failures.
+The agent runs on **`claude-haiku-4-5`**. The judge uses **`claude-sonnet-4-6`** (Anthropic does not currently offer a model more cost-effective than Claude 4-5 Haiku. Also, utilizing the same model for both generation and evaluation was avoided to prevent self-preference bias) — a different, little bit more capable model which is comparable to agents model. This is a deliberate decision to mitigate **self-preference bias**, where LLMs tend to rate outputs from the same model family/generation higher. Using a stronger judge also means it can better detect subtle grounding failures. 
 
 ### Rubrics
 
