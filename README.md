@@ -2,6 +2,7 @@
 
 A comprehensive evaluation framework for the `deep-research-lite` research agent.  
 Parallel test execution · LLM-as-judge scoring · Regression detection · HTML trace viewer.
+You can see 3 minute loom in `Loom Nurlan Bobanbay submission.mp4`
 
 ---
 
