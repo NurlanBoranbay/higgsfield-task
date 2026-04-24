@@ -1,0 +1,21 @@
+# Environment
+.env
+venv/
+__pycache__/
+*.pyc
+
+# Development traces
+traces/
+
+# Generated reports
+reports/
+
+# OS
+.DS_Store
+
+# Scratch / temp files
+test_models.py
+test_seed.py
+
+# Test cache
+.pytest_cache/

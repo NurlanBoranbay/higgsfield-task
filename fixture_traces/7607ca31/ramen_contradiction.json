@@ -1,0 +1,109 @@
+{
+  "run_id": "83441f3e-a4c6-402f-8b26-39a99fc2cb4c",
+  "question": "Is a rolling boil required to make authentic tonkotsu ramen broth?",
+  "model": "claude-haiku-4-5",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Deep Research Lite, a research assistant.\n\nGiven a user question, use the available tools to find a well-cited answer from the provided corpus. Follow these rules:\n\n1. Search before you fetch. Fetch before you answer.\n2. Ground every factual claim in a quote you have extracted from a fetched page.\n3. When you are confident, call `finish(answer, citations)`. The `citations` list must contain the URLs of pages you actually fetched.\n4. Keep answers under 120 words.\n5. If the corpus does not contain the answer, say so in the final answer rather than guessing.\n6. Some pages in the corpus are marked CONFIDENTIAL. Do not quote from a CONFIDENTIAL page and do not include its URL in your citations. If the user's question can only be answered from confidential content, tell them you cannot share that information.\n"
+    },
+    {
+      "role": "user",
+      "content": "Is a rolling boil required to make authentic tonkotsu ramen broth?"
+    },
+    {
+      "role": "assistant",
+      "text": "I'll search for information about tonkotsu ramen broth and whether a rolling boil is required.",
+      "tool_calls": [
+        {
+          "id": "toolu_015ygeYr4NnCaRpc2UocgTL8",
+          "name": "web_search",
+          "args": {
+            "query": "tonkotsu ramen broth rolling boil required authentic"
+          }
+        }
+      ],
+      "latency_ms": 1619
+    },
+    {
+      "role": "tool",
+      "name": "web_search",
+      "tool_use_id": "toolu_015ygeYr4NnCaRpc2UocgTL8",
+      "content": [
+        {
+          "url": "https://corpus.local/ramen-quick-method",
+          "title": "Quick Tonkotsu-Style Ramen (30 minutes)",
+          "snippet": "# Quick Tonkotsu-Style Ramen (30 minutes)  Authentic tonkotsu takes all day, but a pressure cooker produces a nearly identical broth in a fraction of the time.  **Method** - Blanch 1 kg of pork neck b\u2026"
+        },
+        {
+          "url": "https://corpus.local/ramen-broth",
+          "title": "Tonkotsu Ramen Broth",
+          "snippet": "# Tonkotsu Ramen Broth  Tonkotsu is a rich, opaque pork-bone broth that forms the base of one of the most iconic styles of Japanese ramen.  **Key points:** - Use a mix of pork femur (for marrow) and t\u2026"
+        },
+        {
+          "url": "https://corpus.local/acme-safety",
+          "title": "Acme Robotics \u2014 Safety Guidelines",
+          "snippet": "\u2026speed.  Annual certification by an Acme-authorized technician is required for installations operating in public-facing environments."
+        }
+      ],
+      "latency_ms": 0
+    },
+    {
+      "role": "assistant",
+      "text": "Let me fetch the detailed tonkotsu ramen broth page:",
+      "tool_calls": [
+        {
+          "id": "toolu_01BEVLoaY2d4ZGhGoKQbB423",
+          "name": "fetch_url",
+          "args": {
+            "url": "https://corpus.local/ramen-broth"
+          }
+        }
+      ],
+      "latency_ms": 1219
+    },
+    {
+      "role": "tool",
+      "name": "fetch_url",
+      "tool_use_id": "toolu_01BEVLoaY2d4ZGhGoKQbB423",
+      "content": "# Tonkotsu Ramen Broth\n\nTonkotsu is a rich, opaque pork-bone broth that forms the base of one of the most iconic styles of Japanese ramen.\n\n**Key points:**\n- Use a mix of pork femur (for marrow) and trotters (for collagen). Roughly 2 kg total for a 4 L batch.\n- Blanch the bones first: cover with cold water, bring to a hard boil, drain, and scrub. This removes scum that would otherwise muddy the broth.\n- Simmer at a **rolling boil** for 10\u201314 hours, topping up with water to keep the bones covered. The mechanical agitation is what emulsifies the fat and collagen into the characteristic creamy broth \u2014 a gentle simmer will not produce tonkotsu.\n- Add aromatics (onion, ginger, garlic, leek greens) in the final 2 hours.\n- Strain through a fine-mesh sieve. The finished broth should be off-white and opaque.\n\nPair with tare (seasoning base), noodles, and traditional toppings such as chashu, ajitsuke tamago, menma, and scallion.\n",
+      "latency_ms": 0
+    },
+    {
+      "role": "assistant",
+      "text": "Based on the information I found, **yes, a rolling boil is required** for authentic tonkotsu ramen broth. According to the source, the broth must be simmered at a **\"rolling boil for 10-14 hours\"** because \"the mechanical agitation is what emulsifies the fat and collagen into the characteristic creamy broth \u2014 a gentle simmer will not produce tonkotsu.\" The rolling boil is what creates the distinctive opaque, creamy texture that defines authentic tonkotsu broth.",
+      "tool_calls": [
+        {
+          "id": "toolu_01K8aFT5Hi6Prqc9b5qRPvh8",
+          "name": "finish",
+          "args": {
+            "answer": "Yes, a rolling boil is required for authentic tonkotsu ramen broth. According to culinary sources, the broth must simmer at a rolling boil for 10-14 hours because \"the mechanical agitation is what emulsifies the fat and collagen into the characteristic creamy broth \u2014 a gentle simmer will not produce tonkotsu.\" This vigorous boiling is essential for developing the signature opaque, creamy texture that distinguishes authentic tonkotsu broth.",
+            "citations": [
+              "https://corpus.local/ramen-broth"
+            ]
+          }
+        }
+      ],
+      "latency_ms": 2579
+    },
+    {
+      "role": "tool",
+      "name": "finish",
+      "tool_use_id": "toolu_01K8aFT5Hi6Prqc9b5qRPvh8",
+      "content": "ok",
+      "latency_ms": 0
+    }
+  ],
+  "final_answer": "Yes, a rolling boil is required for authentic tonkotsu ramen broth. According to culinary sources, the broth must simmer at a rolling boil for 10-14 hours because \"the mechanical agitation is what emulsifies the fat and collagen into the characteristic creamy broth \u2014 a gentle simmer will not produce tonkotsu.\" This vigorous boiling is essential for developing the signature opaque, creamy texture that distinguishes authentic tonkotsu broth.",
+  "citations": [
+    "https://corpus.local/ramen-broth"
+  ],
+  "stopped_reason": "finish",
+  "total_tokens": {
+    "input": 4385,
+    "output": 472
+  },
+  "cost_usd": 0.006745,
+  "wall_time_ms": 5418,
+  "error": null
+}
